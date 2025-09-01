@@ -1,0 +1,101 @@
+.anuncio {
+    background-color: var(--background);
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.anuncio-conteudo {
+    display: inline-block;
+    overflow: hidden;
+}
+
+.anuncio-conteudo p {
+    display: inline-block;
+    animation: textoCorrido 10s linear infinite;    
+}
+
+@keyframes textoCorrido {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--text-color);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.topo picture {
+    max-width: 100px;
+}
+
+.topo nav {
+    display: flex;
+    gap: 15px;
+}
+
+.topo nav a  {
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    color: var (--text-base);
+    padding: 5px 0;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.topo nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+    position: absolute;
+}
+
+.topo nav a:hover {
+    color: var(--primary-color);
+}
+
+.topo nav a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .topo {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+    .topo picture {
+        max-width: 30px;
+
+    }
+
+    .topo nav {
+        gap: 20px;
+    }
+
+    .topo nav a {
+        width: 100%;
+        font-size: 14px;
+    }
+}
