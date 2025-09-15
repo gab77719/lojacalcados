@@ -2,6 +2,8 @@ import './App.css';
 import Topo from './components/Topo';
 import Capa from './components/Capa';
 import Produtos from './components/Produtos';
+import Colecoes from './components/Colecoes';
+import Rodape from './components/Rodape';
 
 function App() {
 
@@ -12,10 +14,15 @@ function App() {
       </header>
       <main>
         <Capa/>
-      </main>
       <section>
         <Produtos/>
       </section>
+      <section>
+        <Colecoes/>
+      </section>
+      </main>
+
+      <Rodape/>
     </>
   );
 }
